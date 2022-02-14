@@ -1,6 +1,7 @@
 .header {
-    display: flex;
-    justify-content: flex-end;
+   display: flex;
+   justify-content: flex-end;
+   margin-right: 15%;
 }
 
 .title{
@@ -12,4 +13,18 @@
 .title2 {
     margin-top: 0;
     font-size: 20px;
+}
+
+.header-btn {
+    margin: 20px;
+    text-align: center;
+}
+
+.header-btn button {
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 50px;
+    border-color: rgb(4, 171, 248);
+    color: rgb(4, 171, 248);
+    background-color: white;
 }
