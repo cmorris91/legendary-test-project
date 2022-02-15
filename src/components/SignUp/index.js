@@ -13,7 +13,8 @@ function SignUp() {
         username:"",
         password:"",
         // confirmPassword:""
-        })
+        });
+
 
     function handleInputChange(event) {
         event.preventDefault();
@@ -24,20 +25,26 @@ function SignUp() {
 
     function handleFormSubmit(event) {
         event.preventDefault();
-        localStorage.setItem("firstName", formObject.firstName);
-        localStorage.setItem("lastName", formObject.lastName);
-        localStorage.setItem("email", formObject.email);
-        localStorage.setItem("username", formObject.username);
-        localStorage.setItem("password", formObject.password);
-        console.log(formObject)
-        alert('Your Account Was Sucessfully Created!')
-    }
+        if(formObject.firstName==''| formObject.lastName==''| formObject.email==''| formObject.username==''| formObject.password=='') {
+            alert("all fields must be completed")
+        } else {
+            localStorage.setItem("firstName", formObject.firstName);
+            localStorage.setItem("lastName", formObject.lastName);
+            localStorage.setItem("email", formObject.email);
+            localStorage.setItem("username", formObject.username);
+            localStorage.setItem("password", formObject.password);
+            console.log(formObject)
+            alert('Your Account Was Sucessfully Created!')
+            window.location.reload()
+        }
+    };
+
     return(
         <div className="row signUpContainer">
             <div className="col signUpForm">
             <h1>Create Account</h1>
             <form>
-                <Input
+                <Input 
                 onChange= {handleInputChange}
                 name="firstName"
                 value={formObject.firstName}
