@@ -1,6 +1,7 @@
 import React, {useState} from "react";
-import {Input} from "../Forms";
-import { Button } from "../Forms";
+import {Input} from "../../components/Forms";
+import { Button } from "../../components/Forms";
+import { Link, withRouter } from "react-router-dom";
 
 
 function SignUp() {
@@ -79,4 +80,4 @@ function SignUp() {
     )
 };
 
-export default SignUp;
+export default withRouter(SignUp);
