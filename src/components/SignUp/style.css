@@ -1,0 +1,27 @@
+.signUpContainer {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.signUpForm {
+    color: white;
+    width: 30%;
+}
+
+.signUpForm h1 {
+    font-size: 55px;
+}
+
+.signUpText {
+    margin-top: 15%;
+}
+
+.signUpText h1{
+    font-size: 40px;
+}
+
+.signUpText p {
+    font-size: 20px;
+}
+

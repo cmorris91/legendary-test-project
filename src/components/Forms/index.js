@@ -1,5 +1,5 @@
 import React from "react";
-
+import "./style.css";
 
 export function Input (props){
     return (
@@ -11,6 +11,6 @@ export function Input (props){
 
 export function Button(props) {
     return(
-        <button {...props}></button>
+        <button className="btn" {...props}></button>
     )
 }

@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import {Input} from "../../components/Forms";
 import { Button } from "../../components/Forms";
 import { Link, withRouter } from "react-router-dom";
+import "./style.css";
 
 
 function SignUp() {
@@ -32,7 +33,8 @@ function SignUp() {
         alert('Your Account Was Sucessfully Created!')
     }
     return(
-        <div>
+        <div className="row signUpContainer">
+            <div className="col signUpForm">
             <h1>Create Account</h1>
             <form>
                 <Input
@@ -74,8 +76,13 @@ function SignUp() {
                 <Button
                 name="signUp"
                 placeholder="Create Account"
-                onClick={handleFormSubmit}/>
+                onClick={handleFormSubmit}>Create My Account</Button>
             </form>
+            </div>
+            <div className="col signUpText">
+                <h1>Let's Begin Collecting Together!</h1>
+                <p>Please enter the required information to create a new account on <br/>Legendary Collections</p>
+            </div>
         </div>
     )
 };
