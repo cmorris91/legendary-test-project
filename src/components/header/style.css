@@ -1,7 +1,7 @@
 .header {
    display: flex;
    justify-content: flex-end;
-   margin-right: 15%;
+   margin-right: 10%;
 }
 
 .title{
@@ -16,7 +16,7 @@
 }
 
 .header-btn {
-    margin: 20px;
+    margin: 25px;
     text-align: center;
 }
 
