@@ -84,6 +84,11 @@ function SignUp() {
                 name="signUp"
                 placeholder="Create Account"
                 onClick={handleFormSubmit}>Create My Account</Button>
+
+                <Link to={"/"} className="cancelBtn">
+                    <button>Cancel</button>
+                </Link>
+                
             </form>
             <div className="pageSwitch">
                 <p>Don't have an account yet? 

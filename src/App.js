@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Redirect, Route, Routes, Switch, } from "react
 import Header from "./components/header";
 import LogIn from "./components/Login";
 import SignUp from "./components/SignUp";
+import Plans from "./components/Plans";
 import "./style.css";
 
 
@@ -13,8 +14,9 @@ function App() {
      <div>
        <Header/>
         <Switch>
-          <Route path="/signup"><SignUp/></Route>
-          <Route path="/"><LogIn/></Route>
+          <Route exact path="/"><LogIn/></Route>
+          <Route exact path="/signup"><SignUp/></Route>
+          <Route exact path="/plans"><Plans/></Route>
         </Switch>
      </div>
    </Router> 

@@ -1,0 +1,55 @@
+.planContainer{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.planBoxes {
+    color: white;
+}
+
+.box {
+    background-color: rgb(4, 138, 248);
+    margin: 5%;
+    border-radius: 10px;
+    margin: 2%;
+}
+
+.planText{
+    display: flex;
+    justify-content: center;
+    margin-top: 12%;
+}
+
+.textBox {
+    text-align: center;
+    max-width: 75%;
+}
+
+.box button {
+    color: white;
+    margin: 15%;
+    background-color: rgb(4, 138, 248);
+    border-radius: 50px;
+    border-color: white;
+    padding: 4%;
+    width: 60%;
+}
+
+.planBoxes h1 {
+    font-size: 3.5rem;
+    padding: 10%;
+}
+
+.cancel {
+    margin: 15%;
+}
+
+.cancelBtn button{
+    color: red;
+    background-color: rgb(52, 51, 51);
+    border-radius: 50px;
+    border-color: red;
+    padding: 2%;
+    width: 35%;
+}
