@@ -54,13 +54,21 @@ function LogIn () {
                 name="Login"
                 placeholder="Login"
                 onClick={handleFormSubmit}>Login</Button>
-
             </form>
+
+            <div className="pageSwitch">
+                <p>Don't have an account yet? 
+                <Link to={"/signup"} className="linkBtn">
+                    Create Account
+                </Link>
+                </p>
+            </div>
            </div>
             <div className="col loginText">
                 <h1>Welcome Back!</h1>
                 <p>It's been a while since we've seen you.<br/>Let's get back to collecting, together!</p>
             </div>
+
         
 
        </div>

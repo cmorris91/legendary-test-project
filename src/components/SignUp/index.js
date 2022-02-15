@@ -85,6 +85,13 @@ function SignUp() {
                 placeholder="Create Account"
                 onClick={handleFormSubmit}>Create My Account</Button>
             </form>
+            <div className="pageSwitch">
+                <p>Don't have an account yet? 
+                <Link to={"/"} className="linkBtn">
+                    Log In
+                </Link>
+                </p>
+            </div>
             </div>
             <div className="col signUpText">
                 <h1>Let's Begin Collecting Together!</h1>
