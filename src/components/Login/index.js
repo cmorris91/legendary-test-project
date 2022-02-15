@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { Input } from "../Forms";
 import {Button} from "../Forms";
 import { Link, withRouter } from "react-router-dom";
+import "./style.css";
+
 
 function LogIn () {
     const [loginObject, setLoginObject] = useState({
@@ -27,29 +29,39 @@ function LogIn () {
             } else {
                 alert('Login information does not match our records');
             }
+
+            localStorage.setItem("loggedIn", loginObject.loggedIn);
         };
         
     return (
-       <div>
-        <form>
-            <Input
-            onChange= {handleInputChange}
-            name="username"
-            value={loginObject.username}
-            placeholder= "Username/email (required)"/> 
+       <div className="row loginContainer">
+           <div className="col loginForm">
+               <h1>Log In</h1>
+            <form>
+                <Input
+                onChange= {handleInputChange}
+                name="username"
+                value={loginObject.username}
+                placeholder= "Username/email (required)"/> 
 
-            <Input
-            onChange= {handleInputChange}
-            name="password"
-            value={loginObject.password}
-            placeholder= "Password (required)"/> 
+                <Input
+                onChange= {handleInputChange}
+                name="password"
+                value={loginObject.password}
+                placeholder= "Password (required)"/> 
 
-            <Button
-            name="Login"
-            placeholder="Login"
-            onClick={handleFormSubmit}>Login</Button>
+                <Button
+                name="Login"
+                placeholder="Login"
+                onClick={handleFormSubmit}>Login</Button>
 
-        </form>
+            </form>
+           </div>
+            <div className="col loginText">
+                <h1>Welcome Back!</h1>
+                <p>It's been a while since we've seen you.<br/>Let's get back to collecting, together!</p>
+            </div>
+        
 
        </div>
     )

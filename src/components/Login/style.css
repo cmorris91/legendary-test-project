@@ -1,27 +1,26 @@
-.signUpContainer {
+.loginContainer{
     display: flex;
     justify-content: space-around;
     text-align: center;
 }
 
-.signUpForm {
+.loginForm {
     color: white;
     width: 20%;
 }
 
-.signUpForm h1 {
+.loginForm h1 {
     font-size: 55px;
 }
 
-.signUpText {
+.loginText {
     margin-top: 12%;
 }
 
-.signUpText h1{
+.loginText h1{
     font-size: 40px;
 }
 
-.signUpText p {
+.loginText p {
     font-size: 20px;
 }
-

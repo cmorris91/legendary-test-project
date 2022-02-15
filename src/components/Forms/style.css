@@ -4,19 +4,19 @@
 }
 
 .form-input {
-    height: 50px;
+    height: 65px;
     border-radius: 15px;
-    width: 100%;
+    width: 75%;
     font-size: 20px;
     padding: 5px;
 }
 
 .btn{
-    width: 100%;
+    width: 75%;
     background-color: rgb(52, 51, 51);
     border-radius: 50px;
     border-color: white;
-    padding: 3%;
+    padding: 1%;
     margin-top: 12%;
     color: white;
     font-size: 20px;
