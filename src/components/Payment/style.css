@@ -1,0 +1,23 @@
+.cardBox {
+    margin: 5%;
+    padding: 5%;
+    text-align: center;
+}
+
+.cardBox Button {
+    margin-top: 3%;
+}
+
+.cardBox h1 {
+    color: white;
+}
+
+.textBox {
+    text-align: center;
+    max-width: 75%;
+}
+ .paymentText {
+    display: flex;
+    justify-content: center;
+    margin-top: 12%;
+ }

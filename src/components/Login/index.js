@@ -30,7 +30,6 @@ function LogIn () {
             } else {
                 alert('Login information does not match our records');
             }
-
             localStorage.setItem("loggedIn", loginObject.loggedIn);
         };
         

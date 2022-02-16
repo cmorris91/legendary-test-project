@@ -59,43 +59,53 @@ function Payment() {
     };
 
     return (
-        <div>
-            <div>
-                <form>
-                    <Input
-                        onChange= {handleInputChange}
-                        name="cardNumber"
-                        value={paymentForm.cardNumber}
-                        placeholder= "Credit Card Number (required)"/> 
+        <div className="row ">
+            <div className="col">
+                <div className="cardBox">
+                    <h1>Enter Payment Information</h1>
+                    <form>
+                        <Input
+                            onChange= {handleInputChange}
+                            name="cardNumber"
+                            value={paymentForm.cardNumber}
+                            placeholder= "Credit Card Number (required)"/> 
 
-                    <Input
-                        onChange= {handleInputChange}
-                        name="expiration"
-                        value={paymentForm.expiration}
-                        placeholder= "expiration date (required)"/> 
-                    <Input
-                        onChange= {handleInputChange}
-                        name="cvc"
-                        value={paymentForm.cvc}
-                        placeholder= "CVC Number (required)"/> 
-                    <Button
+                        <Input
+                            onChange= {handleInputChange}
+                            name="expiration"
+                            value={paymentForm.expiration}
+                            placeholder= "expiration date (required)"/> 
+                        <Input
+                            onChange= {handleInputChange}
+                            name="cvc"
+                            value={paymentForm.cvc}
+                            placeholder= "CVC Number (required)"/> 
+                        <Button
+                            name="Submit"
+                            placeholder="Submit"
+                            onClick={handleFormSubmit}>Submit Payment</Button>
+                    </form>
+                </div>
+                <div className="cardBox">
+                    <h1>Enter Discount Code</h1>
+                    <form>
+                        <Input
+                        onChange= {handleInputChange2}
+                        name="code"
+                        value={discountCode.code}
+                        placeholder= "enter discount code"/> 
+                        <Button
                         name="Submit"
                         placeholder="Submit"
-                        onClick={handleFormSubmit}>Submit Payment</Button>
-                </form>
+                        onClick={handleFormSubmit2}>Submit</Button>
+                    </form>
+                </div>
             </div>
-            <div>
-                <form>
-                    <Input
-                    onChange= {handleInputChange2}
-                    name="code"
-                    value={discountCode.code}
-                    placeholder= "enter discount code"/> 
-                    <Button
-                    name="Submit"
-                    placeholder="Submit"
-                    onClick={handleFormSubmit2}>Submit</Button>
-                </form>
+            <div className="col paymentText">
+                <div className="textBox">
+                    <h1>Almost There!</h1>
+                    <p>Enter your required payment information and you'll be on you're way to happ collecting!</p>
+                </div>
             </div>
         </div>
     )
