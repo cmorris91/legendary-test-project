@@ -9,6 +9,6 @@ Choose a subscription plan based on the updated information recieved from an API
 Enter payment information for subscription of their choice
 Enter a discount code for chosen subscription
 
-##Contributor
+### Contributor
 Chelsey Morris
 
