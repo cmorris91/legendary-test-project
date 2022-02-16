@@ -36,3 +36,12 @@
     justify-content: end;
     align-items: center;
 }
+
+@media screen and (max-width: 900px) {
+ .header-btn button {
+      font-size: 10px;
+      width: auto;
+    }
+  }
+
+ 

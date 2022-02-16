@@ -127,7 +127,7 @@ function Payment() {
             <div className="col paymentText">
                 <div className="textBox">
                     <h1>Almost There!</h1>
-                    <p>Enter your required payment information and you'll be on you're way to happ collecting!</p>
+                    <p>Enter your required payment information and you'll be on you're way to happy collecting!</p>
                 </div>
             </div>
         </div>
