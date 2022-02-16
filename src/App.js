@@ -4,6 +4,7 @@ import Header from "./components/header";
 import LogIn from "./components/Login";
 import SignUp from "./components/SignUp";
 import Plans from "./components/Plans";
+import Payment from "./components/Payment";
 import "./style.css";
 
 
@@ -17,6 +18,7 @@ function App() {
           <Route exact path="/"><LogIn/></Route>
           <Route exact path="/signup"><SignUp/></Route>
           <Route exact path="/plans"><Plans/></Route>
+          <Route exact path="/payment"><Payment/></Route>
         </Switch>
      </div>
    </Router> 
