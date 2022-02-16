@@ -9,6 +9,16 @@ import "./style.css";
 
 
 function App() {
+  const loggedIn = () => {
+    const checkUser = false;
+    if (localStorage.getItem("loggedIn")=== true ) {
+      checkUser = true
+      return checkUser;
+    } else {
+      return checkUser;
+    }
+  };
+
   return (
     
     <Router>
@@ -17,8 +27,8 @@ function App() {
         <Switch>
           <Route exact path="/"><LogIn/></Route>
           <Route exact path="/signup"><SignUp/></Route>
-          <Route exact path="/plans"><Plans/></Route>
-          <Route exact path="/payment"><Payment/></Route>
+          <Route exact path="/plans">{!localStorage.getItem("username") ? <Redirect push to="/" /> : <Plans/>}</Route>
+          <Route exact path="/payment">{!localStorage.getItem("username") ? <Redirect push to="/" /> : <Payment/>}</Route>
         </Switch>
      </div>
    </Router> 

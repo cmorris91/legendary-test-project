@@ -50,7 +50,9 @@ function Plans() {
                           <p>{planObject.result[2].description}</p>
                           <p style={{fontSize: "3rem"}}>{planObject.result[2].price}</p>
                           <p>Every + {planObject.result[2].subscriptionLength}</p>
+                          <Link to={"/Payment"}>
                           <button>Choose</button>
+                          </Link>
                       </div>
                       </div>
                       <div className="cancel">

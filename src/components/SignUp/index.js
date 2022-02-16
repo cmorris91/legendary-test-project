@@ -35,7 +35,7 @@ function SignUp() {
             localStorage.setItem("password", formObject.password);
             console.log(formObject)
             alert('Your Account Was Sucessfully Created!')
-            window.location.reload()
+            window.location.replace("/plans")
         }
     };
 

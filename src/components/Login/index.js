@@ -26,6 +26,7 @@ function LogIn () {
             if(loginObject.username === user | email && loginObject.password=== password){
                 setLoginObject({...loginObject, loggedIn: true});
                 console.log("logged in")
+                window.location.replace("/plans")
             } else {
                 alert('Login information does not match our records');
             }
