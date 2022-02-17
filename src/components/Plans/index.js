@@ -6,6 +6,7 @@ import "./style.css";
 function Plans() {
     const [planObject, setPlanObject] = useState({});
     const [error, setError] = useState(null);
+    const [isBusy, setBusy] = useState(true)
     
     //API to get the plan information 
     useEffect(() => {
@@ -14,6 +15,7 @@ function Plans() {
           .then(
             (result) => {
                 setPlanObject({result})
+                setBusy(false)
             },
             (error) => {
                 setError(error);
@@ -29,33 +31,37 @@ function Plans() {
         //having trouble figuring out the syntax to renderthe planObject items onto the page
         //the plan information is currently commented out
           return(
+              <div>
+              {isBusy ? (
+                  <div>Loading</div>
+              ) : (
               <div className="row planContainer">
                     <div className="col sm={7} planBoxes">
                         <h1>Our Plans</h1>
                         <div className="row">
                         <div className="col box">
-                            {/* <h1>{planObject.result[0].name + ''}</h1> */}
-                            {/* <p>{planObject.result[0].description}</p>
+                            <h1>{planObject.result[0].name + ''}</h1> 
+                            <p>{planObject.result[0].description}</p>
                             <p style={{fontSize: "3rem"}}>{planObject.result[0].price}</p>
-                        <p>Every {planObject.result[0].subscriptionLength}</p> */}
+                        <p>Every {planObject.result[0].subscriptionLength} Days</p>
                             <Link to={"/Payment"}>
                             <button>Choose</button>
                             </Link>
                         </div>
                         <div className="col box">
-                            {/* <h1>{planObject.result[1].name}</h1>
+                            <h1>{planObject.result[1].name}</h1>
                             <p>{planObject.result[1].description}</p>
                             <p style={{fontSize: "3rem"}}>{planObject.result[1].price}</p>
-                        <p>Every + {planObject.result[1].subscriptionLength}</p> */}
+                        <p>Every {planObject.result[1].subscriptionLength} Days</p>
                             <Link to={"/Payment"}>
                             <button>Choose</button>
                             </Link>
                         </div>
                         <div className="col box">
-                            {/* <h1>{planObject.result[2].name}</h1>
+                             <h1>{planObject.result[2].name}</h1>
                             <p>{planObject.result[2].description}</p>
                             <p style={{fontSize: "3rem"}}>{planObject.result[2].price}</p>
-                        <p>Every + {planObject.result[2].subscriptionLength}</p> */}
+                        <p>Every {planObject.result[2].subscriptionLength} Days</p>
                             <Link to={"/Payment"}>
                             <button>Choose</button>
                             </Link>
@@ -76,6 +82,8 @@ function Plans() {
                         </div>
                     </div>
                 </div>
+                )}
+            </div>
             )
             
         }
