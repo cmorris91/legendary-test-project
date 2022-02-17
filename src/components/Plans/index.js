@@ -33,7 +33,7 @@ function Plans() {
           return(
               <div>
               {isBusy ? (
-                  <div>Loading</div>
+                  <div></div>
               ) : (
               <div className="row planContainer">
                     <div className="col sm={7} planBoxes">
